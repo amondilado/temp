@@ -10,16 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/amondilado/temp.git"
   },
-  "author": "",
+  "author": "amondilado",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amondilado/temp/issues"
-  },
-  "homepage": "https://github.com/amondilado/temp#readme",
-  "devDependencies": {
+  "dependencies": {
+    "bootstrap": "^4.5.3",
     "jquery": "^2.2.4"
   },
-  "dependencies": {
-    "bootstrap": "^4.5.3"
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
   }
 }

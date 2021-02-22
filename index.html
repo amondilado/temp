@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temp</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/theme.css">
+</head>
+<body>
+<h1>Temp</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 text-center">
+            <div class="mb-5 bg-secondary" style="width:50vw;height:40vh">image</div>
+            <a href="#videoSection" data-anchor class="btn btn-outline-dark">SCROLL TO VIDEO</a>
+            <ul id="quickLinks" class="bg-white nav quick-links">
+                <li class="nav-item"><a href="#descriptionSection" data-anchor class="nav-link">Description</a></li>
+                <li class="nav-item"><a href="#attributesSection" data-anchor class="nav-link">Attributes</a></li>
+                <li class="nav-item"><a href="#requestSection" data-anchor class="nav-link">requestSection</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+            <ul class="list-unstyled d-flex flex-column flex-wrap list-styled attributes-list _featured">
+                <li class="list-item">Attribute</li>
+                <li class="list-item">Attribute</li>
+                <li class="list-item">Attribute</li>
+                <li class="list-item">Attribute</li>
+                <li class="list-item">Attribute</li>
+                <li class="list-item">Attribute</li>
+            </ul>
+
+            <div class="bg-white py-5 px-2 product-data">
+                <a href="#requestSection" data-anchor class="btn btn-lg btn-block btn-primary">REQUEST</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <section id="descriptionSection" class="mb-3">
+                <h2>Description</h2>
+                <div class="table-responsive">
+                    <table class="table table-borderless table-dark">
+                        <tr>
+                            <th>Attr 1</th>
+                            <th>Attr 2</th>
+                            <th>Attr 3</th>
+                        </tr>
+                        <tr>
+                            <td><strong>value 1</strong></td>
+                            <td><strong>value 1</strong></td>
+                            <td><strong>value 1</strong></td>
+                        </tr>
+                        <tr>
+                            <td>value 1</td>
+                            <td>value 2</td>
+                            <td>value 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores dignissimos inventore laborum optio quidem soluta vel. Accusamus, aliquid assumenda aut commodi, dicta dolores doloribus ducimus eligendi fugit hic incidunt, ipsam iure labore magni molestias nobis non nostrum nulla obcaecati omnis optio perferendis perspiciatis placeat qui reiciendis soluta unde? Animi aspernatur atque commodi dolore doloribus dolorum eaque eligendi eos error eum inventore itaque laborum laudantium libero maxime mollitia nostrum nulla perferendis perspiciatis quas quasi qui sequi tempora tenetur ullam vero, voluptas voluptatibus! Consequatur dicta dolore dolorem et eum, hic illo incidunt ipsum laudantium, modi molestias nostrum officiis provident quasi voluptate!</p>
+            </section>
+            <section id="attributesSection" class="mb-3">
+                <h2>Attributes</h2>
+                <ul class="list-unstyled d-flex flex-column flex-wrap list-styled attributes-list _full">
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                    <li class="list-item">Attribute</li><li class="list-item">Attribute</li><li class="list-item">Attribute</li>
+                </ul>
+            </section>
+            <section id="videoSection" class="mb-3">
+                <h2>Video</h2>
+                <div class="mb-5 bg-secondary" style="width:50vw;height:35vh">video</div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<section id="requestSection" class="bg-secondary py-5 request-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-5">
+                <h2 class="display-2">Form</h2>
+
+                <form action="..." class="ml-3 validate">
+                    <div class="mb-2">
+                        <p>Send your message</p>
+                    </div>
+                    <div class="form-group required">
+                        <label for="requestName">#i18n("label.fullname")</label>
+                        <input id="requestName" name="form.name" type="text" placeholder="#i18n(placeholder.fullname)" class="form-control" required />
+                    </div>
+                    <div class="form-group required">
+                        <label for="requestEmail">#i18n("label.email")</label>
+                        <input id="requestEmail" name="form.email" type="email" placeholder="#i18n(placeholder.email)" class="form-control" required />
+                    </div>
+                    <div class="form-group required">
+                        <label for="requestPhone">#i18n("label.phone")</label>
+                        <input id="requestPhone" name="form.phone" type="tel" placeholder="#i18n(placeholder.phone)" class="form-control" required />
+                    </div>
+                    <div class="form-group required">
+                        <label for="requestSchedule">#i18n("label.contactHours")</label>
+                        <input id="requestSchedule" name="form.phone" type="text" placeholder="#i18n(placeholder.contactHours)" class="form-control" required />
+                    </div>
+                    <div class="mb-3 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Terms</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary">#i18n("button.request")</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

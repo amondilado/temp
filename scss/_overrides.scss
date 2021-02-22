@@ -1,0 +1,28 @@
+$primary: #f00;
+$secondary: #212121;
+$secondary-l: #777;
+
+.bg-secondary {
+  background-color: #212121!important;
+  color: #f2f2f2;
+
+  a {
+    color: #fff;
+  }
+}
+
+.display-2 {
+  font-size: 1.250rem;
+  font-weight: bold;
+}
+
+.ml-3 {
+  margin-left: 1.5rem!important;
+}
+.mb-3 {
+  margin-bottom: 1.5rem!important;
+}
+
+.product-data {
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}

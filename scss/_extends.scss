@@ -1,0 +1,16 @@
+%shape {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: skew(-24deg);
+}
+
+@mixin shape($background, $angle) {
+  content: '';
+  background-color: $background;
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: skew($angle);
+}
