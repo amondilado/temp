@@ -1,0 +1,25 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amondilado/temp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amondilado/temp/issues"
+  },
+  "homepage": "https://github.com/amondilado/temp#readme",
+  "devDependencies": {
+    "jquery": "^2.2.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
