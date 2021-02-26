@@ -62,13 +62,8 @@ $(function () {
           return;
         }
 
-        if (null === currentNode) {
-          currentNode = current;
-
-        } else {
-          currentNode.classList.remove('active');
-          currentNode = current;
-        }
+        currentNode && currentNode.classList.remove('active');
+        currentNode = current;
         currentNode.classList.add('active');
       }
     });
