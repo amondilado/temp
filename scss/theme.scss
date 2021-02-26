@@ -4,6 +4,10 @@
 @import "overrides";
 @import "extends";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .display-2 {
   position: relative;
   padding-left: 1.5rem;
@@ -77,6 +81,7 @@
     z-index: -1;
   }
 }
+
 .quick-links {
   top: -30px;
   transition: top .3s ease-in-out .1s;
@@ -89,6 +94,17 @@
     right: 0;
     width: 100%;
     z-index: 500;
+
+    + .threshold {
+      display: block;
+    }
+  }
+
+  .nav-link {
+    border-bottom: 2px solid #fff;
+    &.active {
+      border-bottom-color: $primary;
+    }
   }
 }
 
