@@ -5,32 +5,38 @@ $(function () {
   if (!quickLinks) return;
 
   const ql_thresholdOffset = quickLinks.offsetHeight;
-  const ql_scrollOffset = ql_thresholdOffset + 32; // TODO refine sections bottom spacing
+  const ql_scrollOffset = ql_thresholdOffset + 32; // Set average sections bottom spacing
   const ql_threshold = ql_thresholdOffset + quickLinks.offsetTop;
-  const ql_anchors = Array.from(_doc.querySelectorAll('a.nav-link[data-anchor]')); // TODO IE support
+  const ql_anchors = Array.prototype.slice.call(_doc.querySelectorAll('a[data-anchor]'));
   const ql_targets = [];
   let currentNode = null
   let lastKnownScrollPosition = 0;
   let ticking = false;
 
-  // Smooth scroll to target polyfill
+  // Lazy loading images
+  var lazyLoadInstance = new LazyLoad();
+
+  // Smooth scroll to target "polyfill"
   const supportsSmoothScrolling = getComputedStyle(_doc.body).scrollBehavior === 'smooth';
 
-  !supportsSmoothScrolling && quickLinks.addEventListener('click', function(e) {
+  function anchorsClickHandler(e) {
     e.preventDefault();
-    if (e.target.nodeName !== "A") return;
     const hash = e.target.hash.substr(1);
 
     if (!hash) return;
 
     const elem = $('#'+hash);
-    elem.length > 0 && $('html, body').animate({scrollTop: elem.offset().top - ql_scrollOffset}, 1400);
-  });
+    elem.length > 0 && $('html, body').animate({scrollTop: elem.offset().top - ql_scrollOffset}, 1600);
+  }
 
   // Get anchor's target nodes
   ql_anchors.map(function(anchor) {
     const hash = anchor.hash.substr(1);
-    hash && ql_targets.push(_doc.getElementById(hash));
+    const node = hash && _doc.getElementById(hash);
+    node && ql_targets.push(node);
+
+    // Add event listeners
+    !supportsSmoothScrolling && anchor.addEventListener('click', anchorsClickHandler);
   });
 
   // Scroll handler
@@ -51,7 +57,7 @@ $(function () {
 
     // Set active state to links
     ql_targets.map(function(node) {
-      if (node && ql_threshold < pos && pos > (node.offsetTop + node.offsetHeight)) {
+      if (ql_threshold < pos && pos > (node.offsetTop + node.offsetHeight)) {
         const cur = ql_anchors.filter(function(anchor) {
           return anchor.href.indexOf(node.id) !== -1
         });
