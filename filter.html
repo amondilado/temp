@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/ion-rangeslider/css/ion.rangeSlider.min.css">
+</head>
+<body>
+<form id="CatalogForm">
+    <input type="hidden" name="limit" value="1"/>
+    <input type="hidden" name="flts" value=""/>
+    <input type="hidden" name="cp" value="1"/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div><a href="#340_341" class="filter-item-selected" data-action="filter" data-filter="remove">
+                    Basmati <span class="fs-4 icon">×</span></a>
+                </div>
+                <button class="btn btn-sm filters-clear" id="filtersClear" type="button">
+                    Αναίρεση επιλογών ×
+                </button>
+                <div>Type</div>
+                <ul class="list-unstyled">
+                    <li class="filter-entry">
+                        <a href="#340_341" class="filter-item selected" data-action="filter" data-filter="remove">Basmati </a>
+                    </li>
+                    <li class="filter-entry">
+                        <a href="#340_361" class="filter-item " data-action="filter">Originario </a>
+                    </li>
+                    <li class="filter-entry">
+                        <a href="#340_362" class="filter-item " data-action="filter">Jasmine </a>
+                    </li>
+                </ul>
+                <div>Origin</div>
+                <ul class="list-unstyled">
+                    <li class="filter-entry">
+                        <a href="#350_341" class="filter-item " data-action="filter">India </a>
+                    </li>
+                    <li class="filter-entry">
+                        <a href="#350_361" class="filter-item " data-action="filter">Italy </a>
+                    </li>
+                    <li class="filter-entry">
+                        <a href="#350_362" class="filter-item " data-action="filter">Africa </a>
+                    </li>
+                </ul>
+
+                <label class="d-block" for="pet-select">Choose a pet:</label>
+                <select class="filter-select" name="pets" id="pet-select" data-id="300">
+                    <option value="">--Please choose an option--</option>
+                    <option value="300_361">300_361</option>
+                    <option value="300_362">300_362</option>
+                    <option value="300_363">300_363</option>
+                </select>
+                <label class="d-block" for="diet">Diet:</label>
+                <select class="filter-select" name="diet" id="diet" data-id="301">
+                    <option value="">--Please choose an option--</option>
+                    <option value="301_361">301_361</option>
+                    <option value="301_362">301_362</option>
+                    <option value="301_363">301_363</option>
+                </select>
+                <input type="text" class="range-slider" name="my_range" value=""
+                       data-id="313"
+                       data-type="double"
+                       data-min="0"
+                       data-max="100"
+                       data-from="0"
+                       data-to="100"
+                       data-grid="false"
+                />
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    var RANGE = [
+        {id: '313_332', val: '15'},
+        {id: '313_331',val: '10'},
+        {id:'313_333', val: '50'},
+        {id: '313_334', val: '100'}],
+    RANGE_SELECTED = [
+        {id: '313_332', val: '15'},
+        {id: '313_331',val: '10'},
+        {id:'313_333', val: '50'}];
+</script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="filter.js"></script>
+</body>
+</html>
